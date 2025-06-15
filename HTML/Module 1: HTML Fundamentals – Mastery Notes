@@ -1,0 +1,148 @@
+Module 1: HTML Fundamentals – Mastery Notes 📘
+
+1.1 What is HTML?
+
+HyperText: Text with hyperlinks linking to other pages or resources.
+
+Markup Language: Uses tags to markup content—defines structure, not functionality.
+
+RFC & W3C Standard: Defined by W3C — HTML5 is the current standard.
+
+1.2 HTML vs. DOM
+
+HTML: The raw text file.
+
+DOM (Document Object Model): In-memory tree representation in the browser.
+
+Important: Modifying the DOM (via JavaScript) updates what user sees—but doesn’t change source HTML.
+
+1.3 Anatomy of an Element
+
+<p class="intro" id="first">Hello, <strong>world</strong>!</p>
+
+Opening tag: <p class="intro" id="first">
+
+p: Tag name
+
+class, id: Attributes with values
+
+Content: Plain text and nested elements (<strong>world</strong>)
+
+Closing tag: </p>
+
+1.4 Text Nodes vs. Element Nodes
+
+Browsers treat text between tags as text nodes.
+Tags create element nodes.
+
+<p>Foo <em>bar</em> baz.</p>
+
+DOM Tree Structure:
+
+p
+
+Text node: "Foo "
+
+em node
+
+Text node: "bar"
+
+Text node: " baz."
+
+1.5 Whitespace Collapsing
+
+Multiple spaces, tabs, and newlines render as a single space:
+
+<p>This   is
+  all   one space.</p>
+
+To preserve formatting, use:
+
+<pre>
+
+CSS: white-space: pre;
+
+HTML Entities: &nbsp; for space
+
+1.6 Nesting Rules & Validation
+
+Every element that requires a closing tag must be closed.
+
+Some tags cannot be nested inside others (e.g., <p> cannot contain <div>).
+
+Use validators like W3C Validator to detect nesting issues.
+
+1.7 HTML vs. XHTML Differences
+
+Feature
+
+HTML5
+
+XHTML (1.0/1.1)
+
+Tag case
+
+lowercase
+
+lowercase
+
+Self-closing tag
+
+<br> or <br />
+
+<br /> required
+
+Attribute quoting
+
+Optional when safe
+
+Always mandatory with quotes
+
+Error handling
+
+Forgiving
+
+Strict, must be XML compliant
+
+MIME type
+
+text/html
+
+application/xhtml+xml
+
+1.8 Document Structure
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page Title</title>
+  </head>
+  <body>
+    <!-- content here -->
+  </body>
+</html>
+
+<!DOCTYPE html>: Enables standards mode in all modern browsers.
+
+<html lang="en">: Declares language for screen readers, SEO.
+
+<meta charset="UTF-8">: Ensures full Unicode support.
+
+<meta viewport>: Enables responsive design on mobile devices.
+
+1.9 Best Practices & Gotchas
+
+Always set <html lang="..."> & <meta charset="UTF-8">.
+
+Avoid BOM in HTML files (causes invisible characters).
+
+Always close tags where required.
+
+Prefer external CSS/JS instead of inline <style> / <script>.
+
+Ensure proper encoding of special characters using entities.
+
+Keep code readable: indent 2–4 spaces, use consistent formatting and spacing.
+
