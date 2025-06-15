@@ -1,0 +1,177 @@
+6.1 Basic Table Structure
+html
+Copy
+Edit
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>24</td>
+  </tr>
+</table>
+Explanation:
+
+<table>: Defines the table container.
+
+<tr>: Table row.
+
+<th>: Header cell (bold by default, aligned center).
+
+<td>: Regular data cell.
+
+6.2 Table Attributes (HTML4 – still supported)
+html
+Copy
+Edit
+<table border="1" cellpadding="5" cellspacing="0" width="100%">
+  ...
+</table>
+border: Sets the border width.
+
+cellpadding: Padding inside cells.
+
+cellspacing: Space between cells.
+
+width: Width of table in % or px.
+
+⚠️ Modern HTML prefers CSS over inline attributes.
+
+6.3 Rowspan & Colspan – Merging Cells
+html
+Copy
+Edit
+<table border="1">
+  <tr>
+    <th rowspan="2">Name</th>
+    <th colspan="2">Contact Info</th>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>Phone</td>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>alice@example.com</td>
+    <td>123-456</td>
+  </tr>
+</table>
+rowspan="2": Makes one cell span 2 rows vertically.
+
+colspan="2": Makes one cell span 2 columns horizontally.
+
+🎯 Use case: When headers or categories apply to multiple columns or rows.
+
+6.4 Table Sections for Semantics
+html
+Copy
+Edit
+<table>
+  <caption>Employee Directory</caption>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>Engineering</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Total: 1 employee</td>
+    </tr>
+  </tfoot>
+</table>
+<caption>: Table title (placed before the table).
+
+<thead>, <tbody>, <tfoot>: Semantic grouping.
+
+scope="col" / scope="row": Improves screen reader support.
+
+6.5 Styling Tables with CSS
+css
+Copy
+Edit
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+border-collapse: collapse: Eliminates spacing between borders.
+
+:nth-child(even): Zebra-striping rows for readability.
+
+6.6 Accessibility Best Practices
+✅ Use:
+
+<caption> for describing the table.
+
+scope="col" and scope="row" in headers.
+
+ARIA roles for dynamic or complex tables:
+
+html
+Copy
+Edit
+<table role="table">
+  <thead role="rowgroup">...</thead>
+  <tr role="row">
+    <th role="columnheader">...</th>
+  </tr>
+</table>
+6.7 Complex Tables (Multi-level Headers)
+html
+Copy
+Edit
+<table border="1">
+  <thead>
+    <tr>
+      <th rowspan="2">Student</th>
+      <th colspan="2">Marks</th>
+      <th rowspan="2">Grade</th>
+    </tr>
+    <tr>
+      <th>Math</th>
+      <th>Science</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>85</td>
+      <td>92</td>
+      <td>A</td>
+    </tr>
+  </tbody>
+</table>
+💡 Tip: Avoid using too many levels of headers – they can be hard to read and less accessible.
+
+6.8 When NOT to Use Tables ❌
+Avoid using tables for layout. Instead, use:
+
+Flexbox
+
+CSS Grid
+
+Tables are semantic only when:
+
+Displaying tabular data (rows/columns with headings)
+
+The structure matters to the meaning (not just visual)
+
