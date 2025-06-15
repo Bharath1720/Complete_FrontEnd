@@ -1,0 +1,124 @@
+5.1 Embedding Images
+
+<img> Tag
+
+<img src="image.jpg" alt="Description" width="300" height="200" />
+
+src: Path to the image
+
+alt: Alternative text (accessibility, SEO)
+
+width, height: Define dimensions (optional)
+
+Best Practices
+
+Always include alt text
+
+Use responsive techniques (like CSS or srcset) for modern layouts
+
+5.2 Embedding Audio
+
+<audio> Tag
+
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+controls: Shows play/pause UI
+
+Multiple <source> tags can be used for browser compatibility
+
+Optional attributes: autoplay, loop, muted, preload
+
+5.3 Embedding Video
+
+<video> Tag
+
+<video width="400" controls>
+  <source src="movie.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+Similar to <audio> with attributes: controls, autoplay, loop, muted, poster
+
+Use subtitles with <track>:
+
+<track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" />
+
+5.4 Embedding YouTube Videos
+
+Using <iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+
+Replace VIDEO_ID with the actual YouTube video ID
+
+allowfullscreen enables fullscreen playback
+
+5.5 Responsive Media
+
+Images
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+Videos (with CSS wrapper)
+
+<div class="video-container">
+  <iframe src="..." frameborder="0" allowfullscreen></iframe>
+</div>
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+❌ Why <video> Doesn’t Work for YouTube
+The <video> tag:
+
+Is used to embed local or self-hosted video files like .mp4, .webm, or .ogg.
+
+Requires a direct media source (src) that the browser can access and decode.
+
+YouTube does not provide direct .mp4 links for streaming; instead, it wraps content in its own player and controls, served over a custom streaming protocol.
+
+✅ Correct Way: Use <iframe> to Embed YouTube
+html
+Copy
+Edit
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+Replace dQw4w9WgXcQ with your own YouTube video ID.
+
+<iframe> is the official and supported method by YouTube.
+
+✅ Bonus Tip: YouTube Video Autoplay (optional)
+You can add query parameters to control playback:
+
+html
+Copy
+Edit
+src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1"
+autoplay=1: Autoplays when loaded
+
+mute=1: Mutes audio (required for autoplay on most browsers)
+
