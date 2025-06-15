@@ -1,0 +1,155 @@
+Module 2: HTML Text & Media Elements – Mastery Notes 
+
+2.1 Headings
+
+HTML provides six levels of headings:
+
+<h1>Main Title</h1>
+<h2>Subheading</h2>
+<h3>Section</h3>
+<h4>Subsection</h4>
+<h5>Smaller Subsection</h5>
+<h6>Smallest</h6>
+
+Use one <h1> per page (semantic importance).
+
+Do not skip heading levels (e.g., <h2> should not directly jump to <h4>).
+
+2.2 Paragraphs & Line Breaks
+
+<p>This is a paragraph.</p>
+<br />
+<p>Another paragraph.</p>
+
+<p>: Defines paragraphs.
+
+<br>: Inserts a line break; avoid overusing.
+
+2.3 Text Formatting Tags
+
+Semantic Formatting
+
+<strong>Important</strong>
+<em>Emphasized</em>
+<mark>Highlighted</mark>
+<code>Code</code>
+<abbr title="HyperText Markup Language">HTML</abbr>
+
+Non-Semantic (Visual only)
+
+<b>Bold (non-semantic)</b>
+<i>Italic (non-semantic)</i>
+<u>Underline</u>
+<sup>Superscript</sup>
+<sub>Subscript</sub>
+
+2.4 Lists: Ordered, Unordered, Description
+
+Unordered List
+
+<ul>
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+
+Ordered List
+
+<ol>
+  <li>Step 1</li>
+  <li>Step 2</li>
+</ol>
+
+Description List
+
+<dl>
+  <dt>HTML</dt>
+  <dd>A markup language.</dd>
+</dl>
+
+2.5 Images
+
+<img src="logo.png" alt="Company Logo" width="200" height="100" />
+
+src: Path to image
+
+alt: Accessibility, SEO
+
+width/height: Optional but improves layout rendering speed
+
+Best Practices
+
+Always include alt text
+
+Use descriptive filenames
+
+Use modern formats like WebP for optimization
+
+2.6 Audio & Video
+
+Audio
+
+<audio controls>
+  <source src="sound.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+Video
+
+<video controls width="640" height="360">
+  <source src="video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+Attributes
+
+controls: Show playback controls
+
+autoplay, loop, muted, poster
+
+2.7 Best Practices & Accessibility
+
+Provide alt for images, captions for media
+
+Don’t use media (e.g., flashing video) that may cause seizures
+
+Avoid auto-playing audio
+
+Use <figure> and <figcaption> for annotated images
+
+2.8 Deprecated or Avoidable Tags
+
+Tag
+
+Status
+
+Reason
+
+<font>
+
+Deprecated
+
+Use CSS instead
+
+<center>
+
+Deprecated
+
+Use CSS: text-align
+
+<b>, <i>
+
+Avoid if possible
+
+Prefer <strong>, <em>
+
+2.9 Practice Exercise
+
+Recreate a blog post layout:
+
+Use <h1> to <h3> for headings
+
+Include paragraphs and line breaks
+
+Add a list of key points (unordered list)
+
+Embed an image and a video
