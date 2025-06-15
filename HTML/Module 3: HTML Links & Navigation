@@ -20,6 +20,54 @@ Target Attribute
 
 _self (default), _blank, _parent, _top
 
+3.1.1 Types of Links – Deep Dive
+
+🔗 External Website Links
+
+<a href="https://www.mozilla.org">Mozilla</a>
+
+Starts with http:// or https://
+
+Opens full URL regardless of current site
+
+Use rel="noopener noreferrer" for security when using target="_blank"
+
+🏠 Internal Page Links
+
+<a href="/about.html">About Page</a>
+
+Points to a page on the same domain
+
+Leading / denotes root-relative; no slash is relative to current file
+
+<a href="team.html">Team</a> <!-- relative to current directory -->
+
+📄 Section Links (Fragment Identifiers)
+
+<a href="#features">Jump to Features</a>
+
+<h2 id="features">Features</h2>
+
+Uses id on destination element
+
+Allows scrolling to a specific part of the page
+
+📧 Email Links
+
+<a href="mailto:me@example.com">Email Me</a>
+
+Opens default email client with recipient pre-filled
+
+You can also add subject/body:
+
+<a href="mailto:me@example.com?subject=Hello&body=Hi there!">Email Me</a>
+
+📞 Telephone Links
+
+<a href="tel:+911234567890">Call Now</a>
+
+Useful on mobile phones to directly initiate calls
+
 3.2 Absolute vs. Relative URLs
 
 Absolute: Full path, includes protocol (e.g., https://site.com/page.html)
@@ -85,13 +133,3 @@ Avoid opening new tabs unless necessary
 Use rel="noopener noreferrer" for external links with target="_blank"
 
 Always validate links (no broken URLs)
-
-3.9 Practice Exercise
-
-Build a navigation bar:
-
-Include links to: Home, Services, About, Contact
-
-Add a section-jump link
-
-Include a download link for a brochure
