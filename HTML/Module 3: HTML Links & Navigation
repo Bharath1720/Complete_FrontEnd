@@ -1,0 +1,97 @@
+3.1 The <a> Anchor Tag
+
+<a href="https://example.com">Visit Example</a>
+
+href: Destination URL
+
+Can link to:
+
+Other websites (https://...)
+
+Internal pages (/about.html)
+
+Page sections (#section1)
+
+Email (mailto:me@example.com)
+
+Target Attribute
+
+<a href="https://example.com" target="_blank">Open in new tab</a>
+
+_self (default), _blank, _parent, _top
+
+3.2 Absolute vs. Relative URLs
+
+Absolute: Full path, includes protocol (e.g., https://site.com/page.html)
+
+Relative: Based on current file location (../folder/file.html)
+
+3.3 Linking to Page Sections (Fragments)
+
+With IDs:
+
+<h2 id="contact">Contact</h2>
+<a href="#contact">Go to Contact Section</a>
+
+Use unique id for target element
+
+Browser scrolls to that element
+
+3.4 Navigation Menus
+
+Semantic <nav> Element
+
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
+Use lists (<ul>) for menu items
+
+Place navigation inside <nav> for accessibility
+
+3.5 Buttons That Link
+
+<a href="/signup" class="btn">Sign Up</a>
+
+Style <a> to look like buttons using CSS
+
+Do NOT use <button> for navigation
+
+3.6 Download Links
+
+<a href="/files/report.pdf" download>Download Report</a>
+
+Forces browser to download file
+
+download attribute may specify filename
+
+3.7 Email & Telephone Links
+
+<a href="mailto:support@example.com">Email Us</a>
+<a href="tel:+911234567890">Call Us</a>
+
+Useful for mobile/web contact functionality
+
+3.8 Best Practices
+
+Use clear, descriptive link text (Click here is bad)
+
+Avoid opening new tabs unless necessary
+
+Use rel="noopener noreferrer" for external links with target="_blank"
+
+Always validate links (no broken URLs)
+
+3.9 Practice Exercise
+
+Build a navigation bar:
+
+Include links to: Home, Services, About, Contact
+
+Add a section-jump link
+
+Include a download link for a brochure
