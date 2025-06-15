@@ -1,0 +1,134 @@
+7.1 Input Validation Attributes
+
+<input type="number" min="1" max="10" />
+<input type="range" min="0" max="100" />
+<input type="email" required />
+<input type="url" name="homepage" />
+
+min, max: Define numeric/range limits.
+
+required: Prevents form submission if the field is empty.
+
+type="email", type="url": Built-in format validation.
+
+name: Assigns a name for form data submission.
+
+7.2 Pattern Validation (Regex)
+
+<input type="text" pattern="[A-Za-z]{3,}" title="Enter at least 3 letters." />
+
+pattern: Enforces regex-based validation.
+
+title: Message shown on validation failure.
+
+7.3 Fieldset and Legend
+
+<form>
+  <fieldset>
+    <legend>Personal Info</legend>
+    <input type="text" name="fname" />
+    <input type="text" name="lname" />
+  </fieldset>
+</form>
+
+<fieldset>: Groups related controls.
+
+<legend>: Title for a fieldset.
+
+7.4 Datalist for Suggestions
+
+<input list="browsers" name="browser" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Safari">
+</datalist>
+
+Provides user suggestions without restricting input.
+
+7.5 Grouped Select Options
+
+<select>
+  <optgroup label="Frontend">
+    <option>HTML</option>
+    <option>CSS</option>
+  </optgroup>
+  <optgroup label="Backend">
+    <option>Node.js</option>
+    <option>Python</option>
+  </optgroup>
+</select>
+
+<optgroup>: Groups options by category.
+
+7.6 Hidden Fields
+
+<input type="hidden" name="userid" value="12345" />
+
+Invisible to the user, useful for sending metadata.
+
+7.7 Form Submission with Action/Method
+
+<form action="/submit" method="POST">
+  <input name="email" type="email" required />
+  <button type="submit">Submit</button>
+</form>
+
+action: Destination URL.
+
+method: GET (URL params) or POST (secure body).
+
+7.8 Autocomplete and Autofocus
+
+<input type="text" name="city" autocomplete="on" autofocus />
+
+autocomplete: Suggests previously entered values.
+
+autofocus: Auto-selects input on page load.
+
+7.9 Disabling and Read-only
+
+<input type="text" value="Static" readonly />
+<input type="text" value="Blocked" disabled />
+
+readonly: Can’t edit, but value is submitted.
+
+disabled: Can’t edit and value is not submitted.
+
+7.10 File Upload
+
+<input type="file" name="resume" accept=".pdf,.docx" />
+
+Allows user to upload files.
+
+accept: Filters file types.
+
+7.11 Form Attributes Summary
+
+Attribute
+
+Description
+
+action
+
+URL where data is sent
+
+method
+
+HTTP method: GET or POST
+
+autocomplete
+
+Enables browser auto-fill
+
+enctype
+
+Encoding type for file uploads
+
+novalidate
+
+Disables built-in validation
+
+target
+
+Where to display response
