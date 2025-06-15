@@ -1,0 +1,111 @@
+4.1 Introduction to Forms
+
+HTML forms are used to collect user input and send it to a server.
+
+<form action="/submit" method="post">
+  <!-- form elements here -->
+</form>
+
+action: URL where form data is sent
+
+method: HTTP method (usually GET or POST)
+
+4.2 Basic Input Types
+
+Text Input
+
+<input type="text" name="username" />
+
+Password Input
+
+<input type="password" name="userpass" />
+
+Number Input
+
+<input type="number" name="quantity" min="1" max="10" />
+
+Range Input
+
+<input type="range" name="volume" min="0" max="100" />
+
+Email Input
+
+<input type="email" name="email" required />
+
+URL Input
+
+<input type="url" name="website" />
+
+4.3 Labels and Accessibility
+
+Use <label> to associate text with inputs:
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" />
+
+for attribute connects label to input via id
+
+4.4 Select Dropdowns
+
+<select name="country">
+  <option value="in">India</option>
+  <option value="us">USA</option>
+</select>
+
+4.5 Radio Buttons
+
+<label><input type="radio" name="gender" value="male" /> Male</label>
+<label><input type="radio" name="gender" value="female" /> Female</label>
+
+Same name groups options
+
+4.6 Checkboxes
+
+<label><input type="checkbox" name="skills" value="html" /> HTML</label>
+<label><input type="checkbox" name="skills" value="css" /> CSS</label>
+
+4.7 Textarea (Multi-line Input)
+
+<textarea name="message" rows="4" cols="50"></textarea>
+
+4.8 Submit & Reset Buttons
+
+<input type="submit" value="Submit" />
+<input type="reset" value="Reset" />
+
+4.9 Fieldset and Legend
+
+Used to group related form fields:
+
+<fieldset>
+  <legend>Personal Info</legend>
+  <label>Name: <input type="text" name="name" /></label>
+</fieldset>
+
+4.10 Hidden Inputs
+
+Used to send hidden values:
+
+<input type="hidden" name="user_id" value="12345" />
+
+4.11 Input Validation Attributes
+
+required: Must be filled before submission
+
+min, max: For number/range inputs
+
+maxlength, minlength: For text inputs
+
+pattern: Regex pattern validation
+
+<input type="text" name="zip" pattern="\d{5}" required />
+
+4.12 Form Accessibility & Best Practices
+
+Use labels with for and id
+
+Group related inputs with <fieldset>
+
+Always use name on input fields to ensure they’re included in submission
+
+Keep forms semantic and keyboard-navigable
