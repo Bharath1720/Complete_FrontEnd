@@ -1,0 +1,82 @@
+8.1 Embedding Images
+
+<img src="dog.jpg" alt="A cute dog" width="300" height="200" />
+
+src: Path to the image
+
+alt: Description for accessibility
+
+width, height: Dimensions (px or %)
+
+8.2 Embedding Video
+
+<video src="movie.mp4" controls width="640" height="360"></video>
+
+controls: Adds play/pause, volume, etc.
+
+Other attributes: autoplay, loop, muted, poster, preload
+
+Best Practice
+
+Provide multiple formats for browser compatibility:
+
+<video controls>
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.webm" type="video/webm" />
+  Your browser does not support video playback.
+</video>
+
+8.3 Embedding Audio
+
+<audio controls>
+  <source src="sound.mp3" type="audio/mpeg">
+  <source src="sound.ogg" type="audio/ogg">
+  Your browser does not support audio playback.
+</audio>
+
+Same attributes as <video>
+
+8.4 Embedding YouTube Videos
+
+Use <iframe> to embed:
+
+<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+src: Use YouTube's embed URL (not the standard watch URL)
+
+allowfullscreen: Enables full-screen option
+
+Optional: allow attribute for autoplay, encrypted-media, etc.
+
+8.5 The <object> and <embed> Tags
+
+<object> Example
+
+<object data="file.pdf" type="application/pdf" width="600" height="400">
+  Your browser does not support embedded files.
+</object>
+
+<embed> Example
+
+<embed src="file.swf" width="300" height="200">
+
+Use <object> over <embed> for better fallback support.
+
+8.6 Accessibility & Fallbacks
+
+Always include text alternatives.
+
+For media: provide captions, transcripts when possible.
+
+8.7 Styling Multimedia Elements
+
+video, audio {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
