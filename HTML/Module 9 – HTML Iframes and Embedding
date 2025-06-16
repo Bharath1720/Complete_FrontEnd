@@ -1,0 +1,99 @@
+9.1 What is an Iframe?
+
+The <iframe> tag embeds another HTML page inside the current page.
+
+Commonly used for embedding:
+
+YouTube videos
+
+Google Maps
+
+Third-party content like widgets or forms
+
+<iframe src="https://example.com" width="600" height="400"></iframe>
+
+Attributes:
+
+src: URL of the page to embed
+
+width, height: Dimensions
+
+title: Improves accessibility
+
+frameborder: 0 to remove border (obsolete in HTML5)
+
+allowfullscreen: Enables full-screen support
+
+loading: lazy for performance
+
+9.2 Embedding YouTube Videos
+
+<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+</iframe>
+
+You must use the embed URL, not the standard watch URL.
+
+YouTube allows many permissions via allow attribute.
+
+9.3 Google Maps Embedding
+
+From Google Maps "Share" > "Embed map" tab:
+
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12..."
+  width="600" height="450" style="border:0;"
+  allowfullscreen="" loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+9.4 Iframe Security Concerns
+
+Cross-site scripting (XSS) risks
+
+Sandboxing iframes adds security:
+
+<iframe src="page.html" sandbox></iframe>
+
+sandbox Attribute Options:
+
+allow-scripts: Enable JavaScript
+
+allow-forms: Allow forms
+
+allow-same-origin: Retain origin (needed for some interactions)
+
+Example:
+
+<iframe src="page.html" sandbox="allow-scripts allow-forms"></iframe>
+
+9.5 Fallback Content
+
+Displayed if iframe fails:
+
+<iframe src="content.html">
+  Your browser does not support iframes.
+</iframe>
+
+9.6 Styling Iframes with CSS
+
+iframe {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+9.7 Accessibility Considerations
+
+Use title attribute to describe iframe content
+
+Ensure contrast/visibility of embedded content
+
+Avoid nesting too deeply for screen reader usability
+
