@@ -1,0 +1,126 @@
+11.1 What Are Forms?
+
+Forms collect user input and send it to a server.
+
+The <form> tag wraps all form controls.
+
+<form action="/submit" method="POST">
+  <!-- inputs go here -->
+</form>
+
+action: URL where data is sent
+
+method: HTTP method (GET or POST)
+
+11.2 Common Input Types
+
+<input type="text" name="username" placeholder="Enter username" required />
+<input type="password" name="pass" placeholder="Password" />
+<input type="email" name="email" required />
+<input type="number" name="age" min="1" max="100" />
+<input type="range" name="volume" min="0" max="100" />
+<input type="checkbox" name="subscribe" checked />
+<input type="radio" name="gender" value="male" /> Male
+<input type="radio" name="gender" value="female" /> Female
+<input type="file" name="resume" />
+<input type="submit" value="Submit" />
+
+name: Used as key when submitting data
+
+required: Makes field mandatory
+
+11.3 Labels and Accessibility
+
+<label for="email">Email:</label>
+<input id="email" type="email" />
+
+for attribute should match id of input.
+
+Improves accessibility and clickability.
+
+11.4 Textarea
+
+<textarea name="message" rows="4" cols="50">Default text</textarea>
+
+Used for multiline text.
+
+11.5 Select Dropdown
+
+<select name="fruit">
+  <option value="apple">Apple</option>
+  <option value="banana">Banana</option>
+  <option value="orange" selected>Orange</option>
+</select>
+
+selected sets default choice
+
+11.6 Grouping With Fieldset
+
+<fieldset>
+  <legend>Account Info</legend>
+  <input type="text" name="user" />
+</fieldset>
+
+<fieldset> groups related fields.
+
+<legend> gives it a title.
+
+11.7 HTML5 Input Types
+
+date, datetime-local, color, tel, search, url, etc.
+
+Browser handles basic validation automatically.
+
+11.8 Form Validation Attributes
+
+required, min, max, pattern, maxlength, minlength
+
+Example:
+
+<input type="text" name="pin" pattern="\d{4}" required />
+
+11.9 Autocomplete & Autofocus
+
+autocomplete="on" | "off"
+
+autofocus: Auto-select field on page load
+
+<input name="email" autocomplete="on" autofocus />
+
+11.10 Disabling Inputs
+
+<input type="text" disabled />
+<input type="text" readonly />
+
+disabled: Field is not usable or submitted
+
+readonly: Cannot edit, but submitted
+
+11.11 Hidden Inputs
+
+<input type="hidden" name="csrf_token" value="abc123" />
+
+Not visible, but sent with form
+
+11.12 Enctype for File Uploads
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="myfile" />
+  <input type="submit" />
+</form>
+
+Required for file uploads
+
+11.13 Form Submission Behavior
+
+GET: Appends data to URL (visible)
+
+POST: Sends in HTTP body (secure for passwords, files)
+
+11.14 Form Styling Tips
+
+Use labels and padding
+
+Group fields in <fieldset>
+
+Use :focus, :valid, and :invalid CSS pseudo-classes
