@@ -1,0 +1,128 @@
+10.1 What Are Semantic Elements?
+
+Semantic HTML clearly describes the meaning of the content.
+
+These elements help browsers, developers, and assistive tech (like screen readers).
+
+Examples: <article>, <section>, <header>, <footer>, <aside>, <nav>
+
+10.2 Benefits of Semantic HTML
+
+Improved SEO (Search engines understand page structure better)
+
+Better Accessibility (screen readers and tools interpret your page correctly)
+
+Code Readability (easy to understand structure)
+
+10.3 Common Semantic Elements
+
+<header>
+
+Represents introductory content or navigation links.
+
+<header>
+  <h1>Site Title</h1>
+  <nav>...</nav>
+</header>
+
+<nav>
+
+Used for primary navigation menus.
+
+<nav>
+  <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
+
+<main>
+
+The central content of the document. One per page.
+
+<main>
+  <article>...</article>
+</main>
+
+<article>
+
+Independent content like blog posts, comments, news articles.
+
+<article>
+  <h2>Blog Title</h2>
+  <p>Blog content...</p>
+</article>
+
+<section>
+
+A thematic grouping of content.
+
+<section>
+  <h2>Features</h2>
+  <ul>...</ul>
+</section>
+
+<aside>
+
+Side content such as ads, sidebars, or pull quotes.
+
+<aside>
+  <h3>Advertisement</h3>
+  <p>Buy our product!</p>
+</aside>
+
+<footer>
+
+Footer of the section or document.
+
+<footer>
+  <p>&copy; 2025 My Website</p>
+</footer>
+
+10.4 Non-Semantic vs Semantic Elements
+
+Non-Semantic
+
+Semantic
+
+<div>
+
+<section>
+
+<span>
+
+<article>
+
+<b>
+
+<strong>
+
+<i>
+
+<em>
+
+10.5 Semantic Inline Tags
+
+<strong>: Strong importance
+
+<em>: Emphasis
+
+<abbr>: Abbreviations
+
+<cite>: Citation
+
+<mark>: Highlighted text
+
+<code>: Inline code
+
+Example:
+
+<p>Use the <code>&lt;header&gt;</code> tag to define introductory content.</p>
+
+10.6 Accessibility Tips
+
+Use semantic elements for screen readers.
+
+Add aria-* attributes only when semantic HTML doesn't convey the info.
+
+Headings (<h1> to <h6>) must be used in order.
