@@ -348,5 +348,19 @@ Self-closing tags do not have closing tags.
 - Use external CSS/JS, not the `<style>` or `<script>` tags inside `<body>` for large projects.
 
 ---
+## 📱 Viewport Meta Tag Explanation
+
+This project includes the following meta tag to ensure proper display on all devices:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+
+| Attribute            | Meaning                                              | Why It's Used                                                          |
+| -------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- |
+| `width=device-width` | Sets the page width equal to the device screen width | Ensures the layout fits the screen size (responsive design)            |
+| `initial-scale=1`    | Sets the initial zoom level to 100%                  | Shows content at normal size when the page first loads                 |
+| `user-scalable=1`    | Allows the user to zoom in/out                       | Improves accessibility and user control; `1` means zoom is **allowed** |
+
+
 
 ---
